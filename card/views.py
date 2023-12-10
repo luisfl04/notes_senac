@@ -48,7 +48,7 @@ def update(request, note_id):
     }
     return render(request, template, context)
 
-@login_required(login_url= "/contas/login/")
+@login_required(login_url= "contas/login/")
 def delete(request, note_id):
     note = Note.objects.get( pk = note_id)
     note.delete()

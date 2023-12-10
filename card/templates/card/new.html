@@ -1,0 +1,36 @@
+{% extends "card/base.html" %}
+
+{% block content %}
+
+    <h2>{{action}} note</h2>
+
+    <form method="post" enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+        {% if form.errors %} 
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+            <p>Please, check errors.</p><br>
+            {{form.errors}}
+        </div> 
+        {% endif %}
+    
+        <label for="form.nome.id_for_label"> Title: </label>
+        <div class="form-group col-12">
+            {{form.title.errors}}<br>
+            {{form.title}}
+        </div>    
+    
+        <label for="form.nome.id_for_label"> Description:</label>
+        <div class="form-group col-12">
+            {{form.description.error}}<br>
+            {{form.description}}
+        </div>
+    
+        <input type="submit" value="save" class="btn btn-sm btn-primary">
+        <a class="btn btn-sm btn-secondary" href="{% url 'card:index' %}">Back</a>
+
+    </form>
+
+{% endblock%}
