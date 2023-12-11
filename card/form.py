@@ -8,5 +8,5 @@ class NoteForm(forms.ModelForm):
 
         fields = [
             "title",
-            "description"
+            "description",
         ]

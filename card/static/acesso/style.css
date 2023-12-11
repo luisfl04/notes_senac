@@ -1,0 +1,44 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.titulo {
+    font-family:monospace;
+    text-align: center;
+    margin: 50px 25px;
+    font-size: 55px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 70px;
+    border-bottom:4px solid black ;
+}
+
+.nav-link{
+    padding: 15px 25px;
+    margin: 10px 55px;
+    background-color:#70db70;
+    color:white;
+}
+
+.titulo-index {
+    font-family:monospace;
+    margin: 0px 35px;
+    margin-top: 80px;
+    font-size: 40px;
+}
+
+.card {
+    margin: 65px 50px;
+    background-color:#e6f0ff;
+}
+
+.card-header {
+    background-color: #1a75ff;
+    color: white;
+    font-family: monospace;
+}
