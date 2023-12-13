@@ -11,18 +11,20 @@
     <link rel="stylesheet" href="{% static 'acesso/style.css' %}">
 </head>
 <body>
-    <h1 class="titulo">Hello, create and edit your notes as you wish!</h1>
     
-    <div class="container">
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a class="nav-link active" href="{% url 'card:index' %}"> Notas </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="{% url 'card:create' %}"> Nova nota </a>
-            </li>
-        </ul>
-    </div>
+    <section class="header">    
+        
+        <div class="container">
+            
+            <h1 class="titulo">Hello, create and edit your notes as you wish!</h1>
+            
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'card:create' %}"> Create note</a>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     {% block content %}
     

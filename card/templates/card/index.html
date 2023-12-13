@@ -14,9 +14,11 @@
     <div class="card-body">
         <h3 class="card-title">{{note.title}}</h3>
         <h2 class="card-text">{{note.description}}</h2>
-        <a class="btn btn-sm btn-primary" href="{% url 'card:update' note.id %}">To edite</a>
-        <a class="btn btn-sm btn-danger" href="{% url 'card:delete' note.id %}">Delete</a>
-        <a class= "btn btn-sm btn-secondary" href="{% url 'card:done' note.id %}">✅</a>
+        <div class="card-links">
+            <a class="btn btn-sm btn-primary" href="{% url 'card:update' note.id %}">To edite</a>
+            <a class="btn btn-sm btn-danger" href="{% url 'card:delete' note.id %}">Delete</a>
+            <a class= "btn btn-sm btn-secondary" href="{% url 'card:done' note.id %}">Done ✔</a>
+        </div>
     </div>
 </div>
 
@@ -26,21 +28,24 @@
 
 {% for note in notes_finalizadas %} 
 
-<div class="card" style="width: 50rem;">
+<div class="card"  id="finish-card" style="width: 50rem;">
 
-    <div class="card-header text">
+    <div class="card-header text" id="finish-card-title">
         created_at: {{note.created_at}}<br>
         update_at: {{note.update_at}}
+        <p id="emoji-done">✔</p>
     </div>
-    <div class="card-body">
+    <div class="card-body" id="finish-card-body">
         <h3 class="card-title">{{note.title}}</h3>
-        <h2 class=" card-text">{{note.description}}</h2>
-        <a class="btn btn-sm btn-primary" href="{% url 'card:update' note.id %}">To edite</a>
-        <a class="btn btn-sm btn-danger" href="{% url 'card:delete' note.id %}">Delete</a>
+        <h2 class=" card-text" id="finish-card-text">{{note.description}}</h2>
+        <div id="finish-card-footer">
+            <a class="btn btn-sm btn-primary" href="{% url 'card:update' note.id %}">To edite</a>
+            <a class="btn btn-sm btn-danger" href="{% url 'card:delete' note.id %}">Delete</a>'
+        </div>
     </div>
 </div>
 
-
 {% endfor %}
 
+<h1>footter</h1>
 {% endblock %}
