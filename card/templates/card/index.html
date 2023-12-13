@@ -2,7 +2,15 @@
 
 {% block content %} 
 
-<h2 class="titulo-index"> Notes created:</h2>
+<div class="tema">
+    
+    <h2 class="titulo-index"> Notes created:</h2>
+    
+    <select name="select" id="botao-tema">
+        <option id="dark" value="dark">dark</option>
+        <option id="white" value="white">white</option>
+    </select>
+</div>
 
 {% for note in notes %}
 
@@ -47,5 +55,9 @@
 
 {% endfor %}
 
-<h1>footter</h1>
+<footer class="footer-index">
+    <p class="footer-index-nome">@luisfl04_</p>
+    <p class="footer-index-texto">Copyright &copy; 2023</p>
+</footer>
+
 {% endblock %}

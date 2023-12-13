@@ -1,13 +1,15 @@
-{% extends "card/base.html" %}
+{% extends "card/base_new.html" %}
 
 {% block content %}
 
-    <h2>{{action}} note</h2>
 
-    <form method="post" enctype="multipart/form-data">
+    
+<form method="post" enctype="multipart/form-data" class="formulario">
 
         {% csrf_token %}
 
+    <div class="formulario-campo">
+        
         {% if form.errors %} 
         <div class="alert alert-danger">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
@@ -16,21 +18,26 @@
         </div> 
         {% endif %}
     
-        <label for="form.nome.id_for_label"> Title: </label>
-        <div class="form-group col-12">
+        <label for="form.nome.id_for_label" id="form-title-text"> Title: </label>
+        <div class="form-group col-12" id="form-title">
             {{form.title.errors}}<br>
             {{form.title}}
         </div>    
     
-        <label for="form.nome.id_for_label"> Description:</label>
-        <div class="form-group col-12">
+        <label for="form.nome.id_for_label" id="form-title-description"> Description:</label>
+        <div class="form-group col-12" id="form-description">
             {{form.description.error}}<br>
             {{form.description}}
         </div>
     
-        <input type="submit" value="save" class="btn btn-sm btn-primary">
-        <a class="btn btn-sm btn-secondary" href="{% url 'card:index' %}">Back</a>
+        <div class="form-links">
+            <input type="submit" value="save" class="btn btn-sm btn-primary">
+            <a class="btn btn-sm btn-secondary" href="{% url 'card:index' %}">Back</a>
+        </div>
+    
+    </div>
 
-    </form>
+</form>
+
 
 {% endblock%}

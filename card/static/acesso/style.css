@@ -14,6 +14,7 @@
  
 .header{
     border-bottom: 3px solid black;
+    background-color: #e9ecef;
 }
 
 .nav-pills {
@@ -24,17 +25,25 @@
 
 .nav-item{
     font-size: 1.1rem;
+    display: flex;
     font-family: monospace;
-    opacity: 0.8;
-}
-
-.nav-item:hover{
-    opacity: 1;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .nav-link{
     padding: 11px 21px;
+    opacity: 0.8;
 }
+
+.nav-link:hover{
+    opacity: 1;
+}
+
+#link-admin {
+    margin-left: 100px;
+}
+
 
 /* body index: */
 
@@ -107,4 +116,95 @@ font-size: 20px;
 
 #finish-card-footer a {
     margin-right: 10px;
+}
+
+/* footer index */
+
+
+.footer-index {
+    background-color:#e9ecef;
+    padding: 55px;
+    margin-top:170px;  
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-top: 2px solid black
+}
+
+/* pagina de criação de notas: */
+
+.titulo-new {
+    text-align:center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 100px;
+}
+
+.formulario {
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e9ecef;
+    margin-top: 105px;
+    padding: 30px 50px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.formulario-campo {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+#form-title-description {
+    margin-top: 15px;
+}
+
+.form-links {
+    padding-top:20px;
+}
+
+.form-links a {
+    margin-left: 20px;
+}
+
+/* pagina de login: */
+
+.titulo-login {
+    text-align:center;
+    font-family: monospace;
+    font-size: 35px;
+    margin:80px 0;
+}
+
+#formulario-login {
+    margin-top:50px;
+    padding: 45px 30px;
+}
+
+#formulario-login-text-password {
+    padding-top: 10px;
+}
+
+.form-login-links {
+    padding-top: 30px;
+}
+
+/* botao de tema :*/
+
+.tema {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#botao-tema {
+margin-right: 50px;
+margin-top: 70px;
+font-family: monospace;
+height: 30px;
 }
